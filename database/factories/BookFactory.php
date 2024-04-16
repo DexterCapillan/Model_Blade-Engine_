@@ -21,11 +21,11 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            'ISBN'=>Int::random(13),
-            'title'=>fake()->title(),
+            'ISBN'=>fake()->isbn13(),
+            'title'=>fake()->words(3),
             'author'=>fake()->name(),
-            'description'=>fake()->sentence(100),
-            'date_published'=>fake()->date()
+            'description'=>fake()->sentence(5),
+            'date_published'=>fake()->dateTime()
         ];
     }
 }
