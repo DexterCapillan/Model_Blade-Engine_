@@ -1,10 +1,11 @@
 <?php
 
 namespace Database\Seeders;
+use App\Models\Book;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Http\Models\Book;
+
 
 class BookSeeder extends Seeder
 {
