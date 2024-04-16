@@ -13,6 +13,8 @@ class Book extends Model
         'title',
         'author',
         'description',
-        'date_published'
+        'date_published',
+        'updated_at',
+        'created_at'
     ];
 }

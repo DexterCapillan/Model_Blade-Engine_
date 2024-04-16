@@ -22,7 +22,7 @@ class BookFactory extends Factory
     {
         return [
             'ISBN'=>fake()->isbn13(),
-            'title'=>fake()->words(3),
+            'title'=>fake()->word(),
             'author'=>fake()->name(),
             'description'=>fake()->sentence(5),
             'date_published'=>fake()->date()
