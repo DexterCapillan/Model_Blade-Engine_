@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->int('ISBN', 13);
+            $table->unsignedInteger('ISBN');
             $table->string('title');
             $table->string('author');
             $table->string('description');
