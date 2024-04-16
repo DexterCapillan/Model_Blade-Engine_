@@ -25,7 +25,7 @@ class BookFactory extends Factory
             'title'=>fake()->words(3),
             'author'=>fake()->name(),
             'description'=>fake()->sentence(5),
-            'date_published'=>fake()->dateTime()
+            'date_published'=>fake()->date()
         ];
     }
 }

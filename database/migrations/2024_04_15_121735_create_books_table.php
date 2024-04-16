@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('author');
             $table->string('description');
             $table->date('date_published');
+            $table->date('updated_at');
+            $table->date('created_at');
         });
     }
 
