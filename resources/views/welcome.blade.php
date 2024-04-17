@@ -4,39 +4,21 @@
 
     <div class="bg-white p-8 rounded-lg shadow-lg">
 
-        <table class="w-full table-auto">
+        <h1 class="text-3xl text-center py-4">Book List</h1>
 
-            <h1 class="text-3xl text-center py-4">Book List</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <thead>
-                <tr class="bg-gray-800 text-white">
-                    <th class="border px-4 py-2">ISBN</th>
-                    <th class="border px-4 py-2">Book Title</th>
-                    <th class="border px-4 py-2">Author</th>
-                    <th class="border px-4 py-2">Description</th>
-                    <th class="border px-4 py-2">Date of Publication</th>
-                </tr>
-            </thead>
+            @foreach($books as $book)
+            <div class="bg-gray-100 rounded-lg p-4">
+                <h2 class="text-xl font-semibold">{{$book->title}}</h2>
+                <p class="text-gray-700 mb-2">By {{$book->author}}</p>
+                <p class="text-gray-600">{{$book->description}}</p>
+                <p class="text-gray-600 mt-2">ISBN: {{$book->ISBN}}</p>
+                <p class="text-gray-600">Published: {{$book->date_published}}</p>
+            </div>
+            @endforeach
 
-            <tbody>
-
-                @foreach($books as $book)
-                
-                <tr>
-
-                    <td class="border px-4 py-2">{{$book->ISBN}}</td>
-                    <td class="border px-4 py-2">{{$book->title}}</td>
-                    <td class="border px-4 py-2">{{$book->author}}</td>
-                    <td class="border px-4 py-2">{{$book->description}}</td>
-                    <td class="border px-4 py-2">{{$book->date_published}}</td>
-
-                </tr>
-
-                @endforeach
-
-            </tbody>
-
-        </table>
+        </div>
 
     </div>
 
